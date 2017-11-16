@@ -10,4 +10,4 @@ Our main idea for this project is to create a program that is similar to a flow 
 
 Initial Listing of Task:
 
-Plan:
+Plan: Our plan for this project is to use a similar method to lab 9, which was the Todo list. Scanners were used to allow the user to input category-search, priority-search, 
