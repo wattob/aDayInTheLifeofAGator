@@ -1,6 +1,6 @@
 # Proposal by Dillon Thoma and Ben Watto
 
-Interactive Storytelling: A Day In The Life of A Gator
+Interactive Storytelling: A Day In The Life of A Gator!
 
 Abstract:
 We will create a computer program that allows user input to be produced into output. The user will be given a number of options to choose from to follow a story that leads them through an adventure-style story about a day at Allegheny College. The option that the user chooses will decide the next set of options that are given, and will ultimately decide how their day goes. We plan to use conditional logic and iterations to create this program.
