@@ -22,14 +22,14 @@ jar {
   manifest {
     attributes(
         'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-        'Main-Class': 'labeleven.TextBasedGameMain'
+        'Main-Class': 'labeleven.InteractiveGameMain'
         )
   }
 }
 
 // give the name of the application to run with "gradle run" command
 apply plugin: 'application'
-mainClassName = 'labeleven.TextBasedGameMain'
+mainClassName = 'labeleven.InteractiveGameMain'
 
 // specify that the application will accept input from System.in
 run {
