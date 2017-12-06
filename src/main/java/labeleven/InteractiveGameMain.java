@@ -1,5 +1,6 @@
 package labeleven;
 
+import java.util.Date;
 import java.util.Scanner;
 // public class must match the name of the program.
 public class InteractiveGameMain {
@@ -10,6 +11,7 @@ public class InteractiveGameMain {
     String Decision1, Decision2, Decision3, Decision4, Decision5;
     //String Examine;
 
+    System.out.println("Dillon Thoma and Ben Watto " + new Date());
     System.out.println("Welcome to Interactive Storytelling:");
     System.out.println();
     System.out.println("A Day In the Life of a Gator!");
@@ -21,66 +23,71 @@ public class InteractiveGameMain {
     if (Decision1.equalsIgnoreCase("get up")) {
         //while (true) {
         System.out.println();
-        System.out.println("you do stuff 'stuff' yay or yeah the other 'thing' man");
+        System.out.println("You go to your first class of the day, and need to decide where to eat. \nDo you want to eat at 'Brooks' or 'Kins'?");
         //if else (.equalsIgnoreCase("examine"))
         //System.out.println("Theres stuff man")
         Decision2 = scan.nextLine();
 
-        if (Decision2.equalsIgnoreCase("stuff")) {
+        if (Decision2.equalsIgnoreCase("Kins")) {
             System.out.println();
-            System.out.println(" wow theres stuff \nWould you like to eat some of the food, 'Yes' or 'No'?");
+            System.out.println("Good choice. \nWhat do you want to eat? 'Cantina' or 'Pasta'?");
             Decision3 = scan.nextLine();
 
-            if (Decision3.equalsIgnoreCase("Yes")) {
+            if (Decision3.equalsIgnoreCase("Cantina")) {
                 System.out.println();
-                System.out.println("You live!");
-                System.out.println("Pizza or fries?");
+                System.out.println("You enjoy your lunch and head to your afternoon classes. \nAfter class, do you want to do 'homework' or take a 'nap'?");
                 Decision4 = scan.nextLine();
 
-                if (Decision4.equalsIgnoreCase("pizza")) {
+                if (Decision4.equalsIgnoreCase("homework")) {
                     System.out.println();
-                    System.out.println("You live!");
+                    System.out.println("You pass all your classes at the end of the year! \nWay to be a responsible Gator!");
 
-                } else if (Decision4.equalsIgnoreCase("fries")) {
+                } else if (Decision4.equalsIgnoreCase("nap")) {
                       System.out.println();
-                      System.out.println("You lose!");
+                      System.out.println("You procrastinated too much, and failed out of your classes!");
+                      System.out.println("Bad Gator!");
+                }
 
-            } else if (Decision3.equalsIgnoreCase("No")) {
+            } else if (Decision3.equalsIgnoreCase("Pasta")) {
                 System.out.println();
-                System.out.println("You lose!");
+                System.out.println("You spend all your munch money and starve!");
+                System.out.println("Bad Gator!");
               }
-        } else if (Decision2.equalsIgnoreCase("thing")) {
-            System.out.println("There is a puppy inside. Do you want to 'fight' it, or 'run away'?");
+
+        } else if (Decision2.equalsIgnoreCase("Brooks")) {
+            System.out.println("Risky move, Gator. Do you want to go straight to 'Slice' or try the 'Main' Line?");
             System.out.println();
             Decision3 = scan.nextLine();
 
-            if (Decision3.equalsIgnoreCase("fight")) {
+            if (Decision3.equalsIgnoreCase("Main")) {
                 System.out.println();
-                System.out.println("You did it!");
-                System.out.println("red or blue?");
+                System.out.println("Can't go wrong on mac & cheese day! Good move!");
+                System.out.println("'Ice Cream' or 'No' ice cream?");
                 Decision4 = scan.nextLine();
 
-                if (Decision4.equalsIgnoreCase("red")) {
+                if (Decision4.equalsIgnoreCase("Ice Cream")) {
                     System.out.println();
-                    System.out.println("You live!");
+                    System.out.println("You get sick and miss your afternoon classes!");
+                    System.out.println("Bad Gator!");
 
-                } else if (Decision4.equalsIgnoreCase("blue")) {
+                } else if (Decision4.equalsIgnoreCase("No")) {
                       System.out.println();
-                      System.out.println("You lose!");
+                      System.out.println("Way to be healthy!");
+                    }
 
 
 
-            } else if (Decision3.equalsIgnoreCase("run away")) {
+            } else if (Decision3.equalsIgnoreCase("Slice")) {
                 System.out.println();
-                System.out.println("the puppy is too fast and you died");
-
-    } else if (Decision1.equalsIgnoreCase("sleep")) {
+                System.out.println("There is no cheese pizza today; only leftovers from last week on a pizza!");
+                System.out.println("You get food poisining and miss your afternoon classes!");
+                System.out.println("Bad Gator!");
+              }
+            }
+  } else if (Decision1.equalsIgnoreCase("sleep")) {
       System.out.println();
-      System.out.println("you sleep through the whole day!");
+      System.out.println("You sleep through the whole day, and fail out!");
+      System.out.println("Bad Gator!");
       }
-    }
-    }
-  }
-  }
 }
 }
