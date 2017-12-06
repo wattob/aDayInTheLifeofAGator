@@ -2,7 +2,10 @@ package labeleven;
 
 import java.util.Date;
 import java.util.Scanner;
+
 // public class must match the name of the program.
+// run with gradle -q --console plain run
+
 public class InteractiveGameMain {
   public static void main(String[] args) {
 
@@ -40,7 +43,17 @@ public class InteractiveGameMain {
 
                 if (Decision4.equalsIgnoreCase("homework")) {
                     System.out.println();
-                    System.out.println("You pass all your classes at the end of the year! \nWay to be a responsible Gator!");
+                    System.out.println("Way to be a responsible Gator! \nNow time for some fun! Do you want to drink 'water' or 'redbull'?");
+                    Decision5 = scan.nextLine();
+
+                    if (Decision5.equalsIgnoreCase("water")) {
+                        System.out.println();
+                        System.out.println("You pass all your classes at the end of the year! \nWay to be a responsible Gator!");
+
+                      } else if (Decision5.equalsIgnoreCase("redbull")) {
+                          System.out.println();
+                          System.out.println("That's bad for you! Poor decision!");
+                      }
 
                 } else if (Decision4.equalsIgnoreCase("nap")) {
                       System.out.println();
