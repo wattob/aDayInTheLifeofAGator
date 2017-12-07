@@ -10,7 +10,7 @@ made a lot of progress, but we still want to implement more features such as an
 examine option to explain more about each situation, making it more in depth, by
 inputting the information from a different class. We also want to add a response
 that doesn't crash the program when erroneous inputs are used. We are thinking of
-using do while loops to create this., and the idea is that if you go down the wrong
+using do while loops to create this, and the idea is that if you go down the wrong
 path, rather than the program crashing, it will give you the option to either try
 again or quit the program. Another potential implementation we have discussed is
 adding an array or array list that will hold more options for more decisions, using
