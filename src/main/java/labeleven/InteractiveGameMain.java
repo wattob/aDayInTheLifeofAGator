@@ -3,15 +3,34 @@ package labeleven;
 import java.util.Date;
 import java.util.Scanner;
 
-// public class must match the name of the program.
-// run with gradle -q --console plain run
+
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ * @author Dillon Thoma and Ben Watto
+ */
 
 public class InteractiveGameMain {
+
+  /**
+   *
+   *
+   *
+   * To run this program, please type: gradle -q --console plain run
+   *
+   * @author Dillon Thoma and Ben Watto
+   */
+
   public static void main(String[] args) {
 
     Scanner scan = new Scanner(System.in);
 
     String Decision1, Decision2, Decision3, Decision4, Decision5;
+    String a = "Bad Gator!";
     //String Examine;
 
     System.out.println("Dillon Thoma and Ben Watto " + new Date());
@@ -43,28 +62,29 @@ public class InteractiveGameMain {
 
                 if (Decision4.equalsIgnoreCase("homework")) {
                     System.out.println();
-                    System.out.println("Way to be a responsible Gator! \nNow time for some fun! Do you want to drink 'water' or 'redbull'?");
+                    System.out.println("Way to be a responsible Gator! \nIt's almost dinner time! Do you want 'Chipotle' or 'Taco Bell'?");
                     Decision5 = scan.nextLine();
 
-                    if (Decision5.equalsIgnoreCase("water")) {
+                    if (Decision5.equalsIgnoreCase("Taco Bell")) {
                         System.out.println();
-                        System.out.println("You pass all your classes at the end of the year! \nWay to be a responsible Gator!");
+                        System.out.println("$12 for 12 tacos? Best investment of your life! \nWay to be a financially responsible Gator!");
 
-                      } else if (Decision5.equalsIgnoreCase("redbull")) {
+                      } else if (Decision5.equalsIgnoreCase("Chipotle")) {
                           System.out.println();
-                          System.out.println("That's bad for you! Poor decision!");
-                      }
+                          System.out.println("You got a flat tire on your way to Pittsburgh!");
+                          System.out.println(a);
+                        }
 
                 } else if (Decision4.equalsIgnoreCase("nap")) {
                       System.out.println();
                       System.out.println("You procrastinated too much, and failed out of your classes!");
-                      System.out.println("Bad Gator!");
-                }
+                      System.out.println(a);
+                  }
 
             } else if (Decision3.equalsIgnoreCase("Pasta")) {
                 System.out.println();
                 System.out.println("You spend all your munch money and starve!");
-                System.out.println("Bad Gator!");
+                System.out.println(a);
               }
 
         } else if (Decision2.equalsIgnoreCase("Brooks")) {
@@ -81,12 +101,12 @@ public class InteractiveGameMain {
                 if (Decision4.equalsIgnoreCase("Ice Cream")) {
                     System.out.println();
                     System.out.println("You get sick and miss your afternoon classes!");
-                    System.out.println("Bad Gator!");
+                    System.out.println(a);
 
                 } else if (Decision4.equalsIgnoreCase("No")) {
                       System.out.println();
                       System.out.println("Way to be healthy!");
-                    }
+                  }
 
 
 
@@ -94,13 +114,13 @@ public class InteractiveGameMain {
                 System.out.println();
                 System.out.println("There is no cheese pizza today; only leftovers from last week on a pizza!");
                 System.out.println("You get food poisining and miss your afternoon classes!");
-                System.out.println("Bad Gator!");
+                System.out.println(a);
               }
             }
   } else if (Decision1.equalsIgnoreCase("sleep")) {
       System.out.println();
       System.out.println("You sleep through the whole day, and fail out!");
-      System.out.println("Bad Gator!");
+      System.out.println(a);
       }
 }
 }
