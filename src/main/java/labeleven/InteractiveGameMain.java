@@ -29,10 +29,14 @@ public class InteractiveGameMain {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
 
-    String Decision1, Decision2, Decision3, Decision4, Decision5;
+    // GreekFight myGreekFight = new GreekFight();
+
+    String Decision1, Decision2, Decision3, Decision4, Decision5, Decision6;
     String a = "Bad Gator!";
     String c = "Congratulations! You made it through a day in the life of a Gator!";
     String i = "INVALID COMMAND. Enter one of the two options listed above.";
+    String q = "GAME OVER.\nThanks for playing!";
+    Boolean running = true;
     //String Examine;
 
     System.out.println("Dillon Thoma and Ben Watto " + new Date());
@@ -46,7 +50,6 @@ public class InteractiveGameMain {
     age = scan.nextInt();
 
     if (age >= 17 && age <= 23) {
-
       System.out.println();
       System.out.println("Welcome fellow Gator! Let's begin our journey!");
     } else {
@@ -54,6 +57,9 @@ public class InteractiveGameMain {
 
       }
       Decision1 = scan.nextLine();
+
+      JOURNEY:
+      while (running) {
 
     System.out.println();
     System.out.println("You wake up to the buzzing of your alarm. \nDo you go back to 'sleep' or 'get up' out of bed?");
@@ -115,6 +121,21 @@ public class InteractiveGameMain {
                             System.out.println();
                             System.out.println("The nearest Chipotle is in Erie, and you get a flat tire on the way!");
                             System.out.println(a);
+                            System.out.println();
+                            System.out.println("Do you want to 'try again' or 'quit' the program?");
+                            Decision6 = scan.nextLine();
+
+                            while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
+                              System.out.println(i);
+                              Decision6 = scan.nextLine();
+                            }
+                            if (Decision6.equalsIgnoreCase("try again")) {
+                              System.out.println();
+                              continue JOURNEY;
+                            } else if (Decision6.equalsIgnoreCase("quit")) {
+                              System.out.println(q);
+                              break;
+                            }
                           }
 
                         } else if (Decision4.equalsIgnoreCase("nap")) {
@@ -188,12 +209,28 @@ public class InteractiveGameMain {
                       System.out.println(a);
                   }
 
+                }
                 } else if (Decision1.equalsIgnoreCase("sleep")) {
                   System.out.println();
                   System.out.println("You sleep through the whole day, and fail out!");
                   System.out.println(a);
-                }
+                  System.out.println();
+                  System.out.println("Do you want to 'try again' or 'quit' the program?");
+                  Decision6 = scan.nextLine();
+
+                  while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
+                    System.out.println(i);
+                    Decision6 = scan.nextLine();
+                  }
+                  if (Decision6.equalsIgnoreCase("try again")) {
+                    System.out.println();
+                    continue JOURNEY;
+                  } else if (Decision6.equalsIgnoreCase("quit")) {
+                    System.out.println(q);
+                    break;
+                  }
               }
+            }
               //
               // private static void GreekFight(){
               //   //implement counter for how many you beat
