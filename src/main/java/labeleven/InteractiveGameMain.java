@@ -5,23 +5,22 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.ArrayList;
 
-/**
- * TODO: Add comments, finish reflection and report, and 3 classes, add fight
- *
- *
- *
- *
- *
+/** This class has a method that will take the user throught a series of Decisions
+ * that they will have to choose between in order to achieve the end goal of making it
+ * through a day in the life of an Allegheny student. Each decision leads the user
+ * down a different pathway, some of which will prompt the user to try again or quit the
+ * program, and some that display a congratulatory message when they make it through the day.
+ * 
  * @author Dillon Thoma and Ben Watto
  */
 
 public class InteractiveGameMain {
 
-  /**
-   *
-   *
-   *
-   * To run this program, please type: gradle -q --console plain run
+  /** The source code inside this method will be executed when the program is run.
+   * To run this program, please type: gradle -q --console plain run.
+   * The output of this program will appear in the terminal window as questions for
+   * the user to answer, each answer prompting a different question based on the previous.
+   * The print line statements make the program display the output.
    *
    * @author Dillon Thoma and Ben Watto
    */
