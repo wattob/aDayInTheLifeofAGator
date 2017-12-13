@@ -3,9 +3,10 @@ package labeleven;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.Random;
+import java.util.ArrayList;
 
 /**
- *
+ * TODO: Add comments, finish reflection and report, and 3 classes, add fight
  *
  *
  *
@@ -34,18 +35,32 @@ public class InteractiveGameMain {
      * The boolean is set to true to correctly use the Label.
      */
 
-    // // ArrayList<String> greetingMessage = new ArrayList<String>();
-    //       String z = "Welcome to Interactive Storytelling:";
-    //       String y = "A Day In the Life of a Gator!";
-    //       String x = "Dillon Thoma and Ben Watto";
-    //
-    //       greetingMessage.add(z);
-    //       greetingMessage.add(y);
-    //       greetingMessage.add(x);
-    //
-    //      for (int g = 0; g < 3; g++){
-    //        System.out.println(greetingMessage.get(g));
-    //      }
+     // trying to create an instance of a class/create an object
+     //GreekFight myFight = new GreekFight();
+
+
+     /** An ArrayList is declared below.
+      * Strings are stored in the container then retrieved to print the message.
+      * The strings also appear in the list.txt file.
+      */
+
+     ArrayList<String> list = new ArrayList<String>();
+          String item1 = "Welcome to Interactive Storytelling:";
+          String item2 = "A Day In the Life of a Gator!";
+          String item3 = "Dillon Thoma and Ben Watto";
+
+          /** The items in the ArrayList are added and then printed using a for loop.
+           * The for loop continues from 0 to 3 to produce all three items. l++ is used
+           * to represent the list.
+           */
+
+          list.add(item1);
+          list.add(item2);
+          list.add(item3);
+
+         for (int l = 0; l < 3; l++){
+           System.out.println(list.get(l));
+         }
 
     Scanner scan = new Scanner(System.in);
     String Decision1, Decision2, Decision3, Decision4, Decision5, Decision6, Decision7;
@@ -56,6 +71,9 @@ public class InteractiveGameMain {
     String r = "Do you want to 'try again' or 'quit' the program?";
     Boolean running = true;
     Decisions decisions = new Decisions();
+    // Strings are declared for each decision and shortcuts for the program's responses
+    // The boolean running is set to true to correctly function with the label.
+
 
 
     /** The source code will execute when the program is run.
@@ -70,6 +88,7 @@ public class InteractiveGameMain {
     int age;
     System.out.println("Please enter your age.");
     age = scan.nextInt();
+    // the age is read in from the user.
 
     /** The source code will .
      *
@@ -77,6 +96,9 @@ public class InteractiveGameMain {
      *
      */
 
+    // If the are the proper age for college then the program will welcome them,
+    // but if they are too old or too young the program will ask why they are in
+    // college.
     if (age >= 17 && age <= 23) {
       System.out.println();
       System.out.println("Welcome fellow Gator! Let's begin our journey!");
@@ -86,57 +108,79 @@ public class InteractiveGameMain {
     }
     Decision1 = scan.nextLine();
 
+    // label used in the 'try again' feature. If try again is typed it will start from here.
+    // but if 'quit' is typed a break is used to end the program and produce the final output.
     JOURNEY:
     while (running) {
       System.out.println();
       System.out.println("You wake up to the buzzing of your alarm. \nDo you go back to 'sleep' or 'get up' out of bed?");
       Decision1 = scan.nextLine();
 
+      // used to print invalid command if input other than those stated is used.
       while (!Decision1.equalsIgnoreCase("sleep") && !Decision1.equalsIgnoreCase("get up")) {
         System.out.println(i);
         Decision1 = scan.nextLine();
       }
 
+    // When 'get up' is chosen, output is printed in the terminal.
+    // Following that another questions is asked using a similar method.
     if (Decision1.equalsIgnoreCase("get up")) {
           System.out.println();
           System.out.println("You go to your first class of the day, and need to decide where to eat for lunch. \nDo you want to eat at 'Brooks' or 'Kins'?");
           Decision2 = scan.nextLine();
 
+          // used to print invalid command if input other than those stated is used.
           while (!Decision2.equalsIgnoreCase("Brooks") && !Decision2.equalsIgnoreCase("Kins")) {
             System.out.println(i);
             Decision2 = scan.nextLine();
           }
 
+          // When 'kins' is chosen, output is printed in the terminal.
+          //  Another question follows the input recieved.
           if (Decision2.equalsIgnoreCase("Kins")) {
               System.out.println();
               System.out.println("Good choice. \nWhat do you want to eat? 'Cantina' or 'Pasta'?");
               Decision3 = scan.nextLine();
 
+              // used to print invalid command if input other than those stated is used.
               while (!Decision3.equalsIgnoreCase("Cantina") && !Decision3.equalsIgnoreCase("Pasta")) {
                 System.out.println(i);
                 Decision3 = scan.nextLine();
               }
 
+              // if 'kins' is chosen, the user than chooses between Cantina or pasta.
+              // Another decision follows depending on the choice made.
               if (Decision3.equalsIgnoreCase("Cantina")) {
                   System.out.println();
                   System.out.println("You enjoy your lunch and head to your afternoon classes. \nAfter class, do you want to do 'homework' or take a 'nap'?");
                   Decision4 = scan.nextLine();
 
+                  // used to print invalid command if input other than those stated is used.
                   while (!Decision4.equalsIgnoreCase("homework") && !Decision4.equalsIgnoreCase("nap")) {
                     System.out.println(i);
                     Decision4 = scan.nextLine();
                   }
 
+                  // When 'cantina' is typed, another prompt will appear.
+                  // if and else if conditonal logic is used to determine what is produced
+                  // from the users input.
+                  // If the user selcects 'nap' then the program will end and the user
+                  // will be asked if they want to 'try again', but if they choose homework
+                  // more prompts will appear to continue along their day.
                   if (Decision4.equalsIgnoreCase("homework")) {
                       System.out.println();
                       System.out.println("Way to be a responsible Gator! \nIt's almost dinner time! Do you want 'Chipotle' or 'Taco Bell'?");
                       Decision5 = scan.nextLine();
 
+                      // used to print invalid command if input other than those stated is used.
                       while (!Decision5.equalsIgnoreCase("Chipotle") && !Decision5.equalsIgnoreCase("Taco Bell")) {
                         System.out.println(i);
                         Decision5 = scan.nextLine();
                       }
 
+                      //Following the answer of 'homework' the user is asked where they want dinner.
+                      // If the user choices Chipotle, their car will break down because the nearest one is in Erie.
+                      // But if the user inputs Taco Bell they will recieve the final question.
                       if (Decision5.equalsIgnoreCase("Taco Bell")) {
                           System.out.println();
                           System.out.println("$12 for 12 tacos? Best investment of your life! \nWay to be a financially responsible Gator!");
@@ -145,11 +189,14 @@ public class InteractiveGameMain {
                           System.out.println("Do you go to the 'party' or study at the 'library'?");
                           Decision7 = scan.nextLine();
 
+                          // used to print invalid command if input other than those stated is used.
                           while (!Decision7.equalsIgnoreCase("library") && !Decision7.equalsIgnoreCase("party")) {
                             System.out.println(i);
                             Decision7 = scan.nextLine();
                           }
 
+                          // If 'Party' is selected than the program will ask the user
+                          // if they want to 'try again' or 'quit' the program.
                           if (Decision7.equalsIgnoreCase("party")) {
                             System.out.println();
                             System.out.println("You drink too much and get sick. Next stop, dropping out!");
@@ -158,6 +205,7 @@ public class InteractiveGameMain {
                             System.out.println(r);
                             Decision6 = scan.nextLine();
 
+                            // Used to print invalid command if input other than those stated is used.
                             while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
                               System.out.println(i);
                               Decision6 = scan.nextLine();
@@ -174,6 +222,9 @@ public class InteractiveGameMain {
                             System.out.println();
                             System.out.println("You get a great study session in and head to bed \nat a reasonable hour!");
                             System.out.println(c);
+                            // Object oriented list used to print out the decisions, after
+                            // the program is completed running is set to false
+                            // to exit the program.
                             running = false;
                             decisions.addDecisions(Decision1, Decision2, Decision3, Decision4, Decision5, Decision7);
                             decisions.printDecisions();
@@ -187,10 +238,14 @@ public class InteractiveGameMain {
                             System.out.println(r);
                             Decision6 = scan.nextLine();
 
+                            // used to print invalid command if input other than those stated is used.
                             while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
-                              System.out.println(i);//while (true) {
+                              System.out.println(i);
                               Decision6 = scan.nextLine();
                             }
+                            // If 'try again' is selected than the program will
+                            // continue from the Label,
+                            // but if 'quit' is selected the program will end.
                             if (Decision6.equalsIgnoreCase("try again")) {
                               System.out.println();
                               continue JOURNEY;
@@ -208,6 +263,7 @@ public class InteractiveGameMain {
                       System.out.println(r);
                       Decision6 = scan.nextLine();
 
+                          // used to print invalid command if input other than those stated is used.
                           while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
                             System.out.println(i);
                             Decision6 = scan.nextLine();
@@ -229,6 +285,7 @@ public class InteractiveGameMain {
                     System.out.println(r);
                     Decision6 = scan.nextLine();
 
+                    // used to print invalid command if input other than those stated is used.
                     while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
                         System.out.println(i);
                         Decision6 = scan.nextLine();
@@ -247,6 +304,7 @@ public class InteractiveGameMain {
                         System.out.println();
                         Decision3 = scan.nextLine();
 
+                        // used to print invalid command if input other than those stated is used.
                         while (!Decision3.equalsIgnoreCase("Slice") && !Decision3.equalsIgnoreCase("Main")) {
                           System.out.println(i);
                           Decision3 = scan.nextLine();
@@ -259,6 +317,7 @@ public class InteractiveGameMain {
                           System.out.println("Do you want to 'fight' for it, or 'leave' Brooks?");
                           Decision4 = scan.nextLine();
 
+                        // used to print invalid command if input other than those stated is used.
                         while (!Decision4.equalsIgnoreCase("fight") && !Decision4.equalsIgnoreCase("leave")) {
                           System.out.println(i);
                           Decision4 = scan.nextLine();
@@ -268,128 +327,9 @@ public class InteractiveGameMain {
                           System.out.println();
 
                           /** the source code.
-                           *
-                           *
-                           *
-                           *
-                           */
-
-                        //   public InteractiveGameMain() {
-                        //
-                        //   /** the source code.
-                        //    *
-                        //    *
-                        //    *
-                        //    *
-                        //    */
-                        //
-                        //   Scanner scan = new Scanner(System.in);
-                        //   Random rand = new Random();
-                        //
-                        //   /** the source code.
-                        //    *
-                        //    *
-                        //    *
-                        //    *
-                        //    */
-                        //
-                        //   String[] enemies = {"Theta Chi", "Phi Psi", "Fiji", "Phi Delt"};
-                        //   int maxEnemyHealth = 75;
-                        //   int enemyDamage = 25;
-                        //   int health = 100;
-                        //   int attackDmg = 50;
-                        //   int numPowerade = 1;
-                        //   int healAmount = 50;
-                        //   int healthPotionDropChance = 40; // percentage
-                        //
-                        //   System.out.println("Welcome to Greek Life!");
-                        //decisions
-                        //
-                        //   FIGHT:
-                        //   while (true) {
-                        //     System.out.println();
-                        //
-                        //     int enemyHealth = rand.nextInt(maxEnemyHealth);
-                        //     // picks a random number from string on line 15
-                        //     String enemy = enemies[rand.nextInt(enemies.length)];
-                        //     System.out.println("\t# " + enemy + " has appeared! #\n");
-                        //
-                        //how to call a method from another class file in java
-                        //
-                        //     while (enemyHealth > 0) {
-                        //       System.out.println("\tYour HP: " + health);
-                        //       System.out.println("\n\tWhat would you like to do?");
-                        //       System.out.println("\t1. 'Attack'");
-                        //       System.out.println("\t2. 'Drink' Powerade.");
-                        //       System.out.println("\t3. Run");
-                        //
-                        //       String input = scan.nextLine();
-                        //       if (input.equalsIgnoreCase("Attack")){
-                        //         int damageDealt = rand.nextInt(attackDmg);
-                        //         int damageTaken = rand.nextInt(enemyAttackDamage);
-                        //
-                        //         enemyHealth -= damageDealt;
-                        //         health -= damageTaken;
-                        //
-                        //         System.out.println("\t You punch the " + enemy + " for " + damageDealt + " damage");
-                        //         System.out.println("\t You recieved " + damageTaken + " in return");
-                        //
-                        //         if (health < 1) {
-                        //               System.out.println("\t You have taken too much damage, you are too weak to go on");
-                        //
-                        //               break;
-                        //         }
-                        //       } else if (input.equalsIgnoreCase("Drink")) {
-                        //
-                        //         if (numPowerade > 0) {
-                        //               health += healAmount;
-                        //               numPo//}werade--;
-                        //               System.out.println("\t You drank Powerade that healed for: " + healAmount + "."
-                        //                                       + "\n\t You now have " + health + "HP."
-                        //                                       + "\n\t You now have " + numPowerade + " bottle(s) of Powerade left.\n");
-                        //         } else {
-                        //               System.out.println("\t You have no Powerade, defeat the " + enemy + " for a chance to get some.");
-                        //         }
-                        //       } else if (input.equalsIgnoreCase("run")) {
-                        //           System.out.println("\t You run away from the " + enemy);
-                        //           continue FIGHT;
-                        //       } else {
-                        //           System.out.println("\tinvalid Command");
-                        //       }
-                        //     }
-                        //     if (health < 1) {
-                        //           System.out.println("You limp out of the party, weak from battle.");
-                        //           break;
-                        //     }
-                        //     System.out.println();
-                        //     System.out.println(" # " + enemy + " was defeated! # ");
-                        //     System.out.println(" # You have " + health + "HP left #");
-                        //
-                        //     if (rand.nextInt(100) < healthPotionDropChance) {
-                        //           numPowerade++;
-                        //           System.out.println(" # The " + enemy + " dropped Powerade. # ");
-                        //           System.out.println(" # You now have " + numPowerade + " bottle(s) of Powerade. # ");
-                        //     }
-                        //     System.out.println("--------------------------------------");
-                        //     System.out.println(" What would you like to do now?");
-                        //     System.out.println("'Continue' Fighting");
-                        //     System.out.println(" 'Exit' Brooks");
-                        //     String input = scan.nextLine();
-                        //
-                        //     while (!input.equalsIgnoreCase("Continue") && !input.equalsIgnoreCase("Exit")) {
-                        //         System.out.println("invalid command");
-                        //         input = scan.nextLine();
-                        //
-                        //     }
-                        //     if (input.equals("Continue")) {
-                        //           System.out.println("You continue your fights.");
-                        //     } else if (input.equals("Exit")) {create objects java
-                        //           System.out.println("You leave Brooks.");
-                        //           break;
-                        //     }
-                        //   }
-                        // }
-
+                          *
+                          *
+                          */
 
 
                         } else if (Decision4.equalsIgnoreCase("leave")) {
@@ -400,6 +340,7 @@ public class InteractiveGameMain {
                             System.out.println("Do you go to 'practice' or 'call' your coach saying you are sick?");
                             Decision5 = scan.nextLine();
 
+                            // used to print invalid command if input other than those stated is used.
                             while (!Decision5.equalsIgnoreCase("practice") && !Decision5.equalsIgnoreCase("call")) {
                               System.out.println(i);
                               Decision5 = scan.nextLine();
@@ -410,6 +351,7 @@ public class InteractiveGameMain {
                           System.out.println("Way to be a responsible and accountable teammate!");
                           System.out.println(c);
                           running = false;
+
                         } else if (Decision5.equalsIgnoreCase("call")) {
                             System.out.println("You get benched from the next game and crush your team's chemistry!");
                             System.out.println(a);
@@ -417,10 +359,11 @@ public class InteractiveGameMain {
                             System.out.println(r);
                             Decision6 = scan.nextLine();
 
+                            // used to print invalid command if input other than those stated is used.
                             while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
                               System.out.println(i);
                               Decision6 = scan.nextLine();
-                            }//}
+                            }
                           if (Decision6.equalsIgnoreCase("try again")) {
                             System.out.println();
                             continue JOURNEY;
@@ -440,6 +383,7 @@ public class InteractiveGameMain {
                             System.out.println(r);
                             Decision6 = scan.nextLine();
 
+                            // used to print invalid command if input other than those stated is used.
                             while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
                               System.out.println(i);
                               Decision6 = scan.nextLine();
@@ -454,6 +398,10 @@ public class InteractiveGameMain {
                         }
 
                     }
+
+    // If 'sleep' is selected then the program will produce the following output.
+    // Then the user will be asked if they want to 'try again' if yes the program
+    // will start at the continue at the Label, if no, the break will be iniatilized.
     } else if (Decision1.equalsIgnoreCase("sleep")) {
         System.out.println();
         System.out.println("You sleep through the whole day, and fail out!");
@@ -462,6 +410,7 @@ public class InteractiveGameMain {
         System.out.println(r);
         Decision6 = scan.nextLine();
 
+        // used to print invalid command if input other than those stated is used.
         while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
           System.out.println(i);
           Decision6 = scan.nextLine();
@@ -475,7 +424,5 @@ public class InteractiveGameMain {
           }
     }
   }
-  //decisions.addDecisions(Decision1, Decision2, Decision3, Decision4, Decision5, Decision7);
-  //decisions.printDecisions();
   }
 }
