@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.Scanner;
 import java.util.Random;
 
-
 /**
  *
  *
@@ -34,6 +33,18 @@ public class InteractiveGameMain {
      * Strings are used in printline statements for ease of the creators.
      * The boolean is set to true to correctly use the Label.
      */
+     // ArrayList<String> greetingMessage = new ArrayList<String>();
+     //      String z = "Welcome to Interactive Storytelling:";
+     //      String y = "A Day In the Life of a Gator!";
+     //      String x = "Dillon Thoma and Ben Watto";
+     //
+     //      greetingMessage.add(z);
+     //      greetingMessage.add(y);
+     //      greetingMessage.add(x);
+     //
+     //     for (int g = 0; g < 3; g++){
+     //       System.out.println(greetingMessage.get(g));
+     //     }
 
     Scanner scan = new Scanner(System.in);
     String Decision1, Decision2, Decision3, Decision4, Decision5, Decision6, Decision7;
@@ -43,6 +54,7 @@ public class InteractiveGameMain {
     String q = "GAME OVER.\nThanks for playing!";
     String r = "Do you want to 'try again' or 'quit' the program?";
     Boolean running = true;
+    Decisions decisions = new Decisions();
 
 
     /** The source code will execute when the program is run.
@@ -51,10 +63,7 @@ public class InteractiveGameMain {
      * the program.
      */
 
-    System.out.println("Dillon Thoma and Ben Watto " + new Date());
-    System.out.println("Welcome to Interactive Storytelling:");
-    System.out.println();
-    System.out.println("A Day In the Life of a Gator!");
+    System.out.println(new Date());
     System.out.println();
 
     int age;
@@ -164,7 +173,9 @@ public class InteractiveGameMain {
                             System.out.println();
                             System.out.println("You get a great study session in and head to bed \nat a reasonable hour!");
                             System.out.println(c);
-                            break;
+                            running = false;
+                            decisions.addDecisions(Decision1, Decision2, Decision3, Decision4, Decision5, Decision7);
+                            decisions.printDecisions();
                           }
 
                       } else if (Decision5.equalsIgnoreCase("Chipotle")) {
@@ -262,121 +273,121 @@ public class InteractiveGameMain {
                            *
                            */
 
-                          public InteractiveGameMain() {
-
-                          /** the source code.
-                           *
-                           *
-                           *
-                           *
-                           */
-
-                          Scanner scan = new Scanner(System.in);
-                          Random rand = new Random();
-
-                          /** the source code.
-                           *
-                           *
-                           *
-                           *
-                           */
-
-                          String[] enemies = {"Theta Chi", "Phi Psi", "Fiji", "Phi Delt"};
-                          int maxEnemyHealth = 75;
-                          int enemyDamage = 25;
-                          int health = 100;
-                          int attackDmg = 50;
-                          int numPowerade = 1;
-                          int healAmount = 50;
-                          int healthPotionDropChance = 40; // percentage
-
-                          System.out.println("Welcome to Greek Life!");
-
-
-                          FIGHT:
-                          while (true) {
-                            System.out.println();
-
-                            int enemyHealth = rand.nextInt(maxEnemyHealth);
-                            // picks a random number from string on line 15
-                            String enemy = enemies[rand.nextInt(enemies.length)];
-                            System.out.println("\t# " + enemy + " has appeared! #\n");
-
-
-
-                            while (enemyHealth > 0) {
-                              System.out.println("\tYour HP: " + health);
-                              System.out.println("\n\tWhat would you like to do?");
-                              System.out.println("\t1. 'Attack'");
-                              System.out.println("\t2. 'Drink' Powerade.");
-                              System.out.println("\t3. Run");
-
-                              String input = scan.nextLine();
-                              if (input.equalsIgnoreCase("Attack")){
-                                int damageDealt = rand.nextInt(attackDmg);
-                                int damageTaken = rand.nextInt(enemyAttackDamage);
-
-                                enemyHealth -= damageDealt;
-                                health -= damageTaken;
-
-                                System.out.println("\t You punch the " + enemy + " for " + damageDealt + " damage");
-                                System.out.println("\t You recieved " + damageTaken + " in return");
-
-                                if (health < 1) {
-                                      System.out.println("\t You have taken too much damage, you are too weak to go on");
-
-                                      break;
-                                }
-                              } else if (input.equalsIgnoreCase("Drink")) {
-
-                                if (numPowerade > 0) {
-                                      health += healAmount;
-                                      numPowerade--;
-                                      System.out.println("\t You drank Powerade that healed for: " + healAmount + "."
-                                                              + "\n\t You now have " + health + "HP."
-                                                              + "\n\t You now have " + numPowerade + " bottle(s) of Powerade left.\n");
-                                } else {
-                                      System.out.println("\t You have no Powerade, defeat the " + enemy + " for a chance to get some.");
-                                }
-                              } else if (input.equalsIgnoreCase("run")) {
-                                  System.out.println("\t You run away from the " + enemy);
-                                  continue FIGHT;
-                              } else {
-                                  System.out.println("\tinvalid Command");
-                              }
-                            }
-                            if (health < 1) {
-                                  System.out.println("You limp out of the party, weak from battle.");
-                                  break;
-                            }
-                            System.out.println();
-                            System.out.println(" # " + enemy + " was defeated! # ");
-                            System.out.println(" # You have " + health + "HP left #");
-
-                            if (rand.nextInt(100) < healthPotionDropChance) {
-                                  numPowerade++;
-                                  System.out.println(" # The " + enemy + " dropped Powerade. # ");
-                                  System.out.println(" # You now have " + numPowerade + " bottle(s) of Powerade. # ");
-                            }
-                            System.out.println("--------------------------------------");
-                            System.out.println(" What would you like to do now?");
-                            System.out.println("'Continue' Fighting");
-                            System.out.println(" 'Exit' Brooks");
-                            String input = scan.nextLine();
-
-                            while (!input.equalsIgnoreCase("Continue") && !input.equalsIgnoreCase("Exit")) {
-                                System.out.println("invalid command");
-                                input = scan.nextLine();
-
-                            }
-                            if (input.equals("Continue")) {
-                                  System.out.println("You continue your fights.");
-                            } else if (input.equals("Exit")) {
-                                  System.out.println("You leave Brooks.");
-                                  break;
-                            }
-                          }
-                        }
+                        //   public InteractiveGameMain() {
+                        //
+                        //   /** the source code.
+                        //    *
+                        //    *
+                        //    *
+                        //    *
+                        //    */
+                        //
+                        //   Scanner scan = new Scanner(System.in);
+                        //   Random rand = new Random();
+                        //
+                        //   /** the source code.
+                        //    *
+                        //    *
+                        //    *
+                        //    *
+                        //    */
+                        //
+                        //   String[] enemies = {"Theta Chi", "Phi Psi", "Fiji", "Phi Delt"};
+                        //   int maxEnemyHealth = 75;
+                        //   int enemyDamage = 25;
+                        //   int health = 100;
+                        //   int attackDmg = 50;
+                        //   int numPowerade = 1;
+                        //   int healAmount = 50;
+                        //   int healthPotionDropChance = 40; // percentage
+                        //
+                        //   System.out.println("Welcome to Greek Life!");
+                        //decisions
+                        //
+                        //   FIGHT:
+                        //   while (true) {
+                        //     System.out.println();
+                        //
+                        //     int enemyHealth = rand.nextInt(maxEnemyHealth);
+                        //     // picks a random number from string on line 15
+                        //     String enemy = enemies[rand.nextInt(enemies.length)];
+                        //     System.out.println("\t# " + enemy + " has appeared! #\n");
+                        //
+                        //how to call a method from another class file in java
+                        //
+                        //     while (enemyHealth > 0) {
+                        //       System.out.println("\tYour HP: " + health);
+                        //       System.out.println("\n\tWhat would you like to do?");
+                        //       System.out.println("\t1. 'Attack'");
+                        //       System.out.println("\t2. 'Drink' Powerade.");
+                        //       System.out.println("\t3. Run");
+                        //
+                        //       String input = scan.nextLine();
+                        //       if (input.equalsIgnoreCase("Attack")){
+                        //         int damageDealt = rand.nextInt(attackDmg);
+                        //         int damageTaken = rand.nextInt(enemyAttackDamage);
+                        //
+                        //         enemyHealth -= damageDealt;
+                        //         health -= damageTaken;
+                        //
+                        //         System.out.println("\t You punch the " + enemy + " for " + damageDealt + " damage");
+                        //         System.out.println("\t You recieved " + damageTaken + " in return");
+                        //
+                        //         if (health < 1) {
+                        //               System.out.println("\t You have taken too much damage, you are too weak to go on");
+                        //
+                        //               break;
+                        //         }
+                        //       } else if (input.equalsIgnoreCase("Drink")) {
+                        //
+                        //         if (numPowerade > 0) {
+                        //               health += healAmount;
+                        //               numPo//}werade--;
+                        //               System.out.println("\t You drank Powerade that healed for: " + healAmount + "."
+                        //                                       + "\n\t You now have " + health + "HP."
+                        //                                       + "\n\t You now have " + numPowerade + " bottle(s) of Powerade left.\n");
+                        //         } else {
+                        //               System.out.println("\t You have no Powerade, defeat the " + enemy + " for a chance to get some.");
+                        //         }
+                        //       } else if (input.equalsIgnoreCase("run")) {
+                        //           System.out.println("\t You run away from the " + enemy);
+                        //           continue FIGHT;
+                        //       } else {
+                        //           System.out.println("\tinvalid Command");
+                        //       }
+                        //     }
+                        //     if (health < 1) {
+                        //           System.out.println("You limp out of the party, weak from battle.");
+                        //           break;
+                        //     }
+                        //     System.out.println();
+                        //     System.out.println(" # " + enemy + " was defeated! # ");
+                        //     System.out.println(" # You have " + health + "HP left #");
+                        //
+                        //     if (rand.nextInt(100) < healthPotionDropChance) {
+                        //           numPowerade++;
+                        //           System.out.println(" # The " + enemy + " dropped Powerade. # ");
+                        //           System.out.println(" # You now have " + numPowerade + " bottle(s) of Powerade. # ");
+                        //     }
+                        //     System.out.println("--------------------------------------");
+                        //     System.out.println(" What would you like to do now?");
+                        //     System.out.println("'Continue' Fighting");
+                        //     System.out.println(" 'Exit' Brooks");
+                        //     String input = scan.nextLine();
+                        //
+                        //     while (!input.equalsIgnoreCase("Continue") && !input.equalsIgnoreCase("Exit")) {
+                        //         System.out.println("invalid command");
+                        //         input = scan.nextLine();
+                        //
+                        //     }
+                        //     if (input.equals("Continue")) {
+                        //           System.out.println("You continue your fights.");
+                        //     } else if (input.equals("Exit")) {create objects java
+                        //           System.out.println("You leave Brooks.");
+                        //           break;
+                        //     }
+                        //   }
+                        // }
 
 
 
@@ -397,8 +408,7 @@ public class InteractiveGameMain {
                           System.out.println();
                           System.out.println("Way to be a responsible and accountable teammate!");
                           System.out.println(c);
-                          break;
-
+                          running = false;
                         } else if (Decision5.equalsIgnoreCase("call")) {
                             System.out.println("You get benched from the next game and crush your team's chemistry!");
                             System.out.println(a);
@@ -409,7 +419,7 @@ public class InteractiveGameMain {
                             while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
                               System.out.println(i);
                               Decision6 = scan.nextLine();
-                            }
+                            }//}
                           if (Decision6.equalsIgnoreCase("try again")) {
                             System.out.println();
                             continue JOURNEY;
@@ -463,6 +473,8 @@ public class InteractiveGameMain {
               break;
           }
     }
-    }
+  }
+  //decisions.addDecisions(Decision1, Decision2, Decision3, Decision4, Decision5, Decision7);
+  //decisions.printDecisions();
   }
 }
