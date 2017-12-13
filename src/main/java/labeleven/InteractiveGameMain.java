@@ -31,12 +31,13 @@ public class InteractiveGameMain {
 
     // GreekFight myGreekFight = new GreekFight();
 
-    String Decision1, Decision2, Decision3, Decision4, Decision5, Decision6;
+    String Decision1, Decision2, Decision3, Decision4, Decision5, Decision6, Decision7;
     String a = "Bad Gator!";
     String c = "Congratulations! You made it through a day in the life of a Gator!";
     String i = "INVALID COMMAND. Enter one of the two options listed above.";
     String q = "GAME OVER.\nThanks for playing!";
     Boolean running = true;
+    String r = "Do you want to 'try again' or 'quit' the program?";
     //String Examine;
 
     System.out.println("Dillon Thoma and Ben Watto " + new Date());
@@ -116,13 +117,49 @@ public class InteractiveGameMain {
                       if (Decision5.equalsIgnoreCase("Taco Bell")) {
                           System.out.println();
                           System.out.println("$12 for 12 tacos? Best investment of your life! \nWay to be a financially responsible Gator!");
+                          System.out.println();
+                          System.out.println("On the way back, your buddy asks you to go to a party, \nbut you could be studying for an exam coming up.");
+                          System.out.println("Do you go to the 'party' or study at the 'library'?");
+                          Decision7 = scan.nextLine();
+
+                          while (!Decision7.equalsIgnoreCase("library") && !Decision7.equalsIgnoreCase("party")) {
+                            System.out.println(i);
+                            Decision7 = scan.nextLine();
+                          }
+
+                          if (Decision7.equalsIgnoreCase("party")) {
+                            System.out.println();
+                            System.out.println("You drink too much and get sick. Next stop, dropping out!");
+                            System.out.println(a);
+                            System.out.println();
+                            System.out.println(r);
+                            Decision6 = scan.nextLine();
+
+                            while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
+                              System.out.println(i);
+                              Decision6 = scan.nextLine();
+                            }
+                            if (Decision6.equalsIgnoreCase("try again")) {
+                              System.out.println();
+                              continue JOURNEY;
+                            } else if (Decision6.equalsIgnoreCase("quit")) {
+                              System.out.println(q);
+                              break;
+                            }
+
+                          } else if (Decision7.equalsIgnoreCase("library")) {
+                            System.out.println();
+                            System.out.println("You get a great study session in and head to bed \nat a reasonable hour!");
+                            System.out.println(c);
+                            break;
+                          }
 
                         } else if (Decision5.equalsIgnoreCase("Chipotle")) {
                             System.out.println();
                             System.out.println("The nearest Chipotle is in Erie, and you get a flat tire on the way!");
                             System.out.println(a);
                             System.out.println();
-                            System.out.println("Do you want to 'try again' or 'quit' the program?");
+                            System.out.println(r);
                             Decision6 = scan.nextLine();
 
                             while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
@@ -142,12 +179,42 @@ public class InteractiveGameMain {
                           System.out.println();
                           System.out.println("You procrastinated too much, and failed out of your classes!");
                           System.out.println(a);
+                          System.out.println();
+                          System.out.println(r);
+                          Decision6 = scan.nextLine();
+
+                          while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
+                            System.out.println(i);
+                            Decision6 = scan.nextLine();
+                          }
+                          if (Decision6.equalsIgnoreCase("try again")) {
+                            System.out.println();
+                            continue JOURNEY;
+                          } else if (Decision6.equalsIgnoreCase("quit")) {
+                            System.out.println(q);
+                            break;
+                          }
                         }
 
                       } else if (Decision3.equalsIgnoreCase("Pasta")) {
                         System.out.println();
                         System.out.println("You spend all your munch money and starve!");
                         System.out.println(a);
+                        System.out.println();
+                        System.out.println(r);
+                        Decision6 = scan.nextLine();
+
+                        while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
+                          System.out.println(i);
+                          Decision6 = scan.nextLine();
+                        }
+                        if (Decision6.equalsIgnoreCase("try again")) {
+                          System.out.println();
+                          continue JOURNEY;
+                        } else if (Decision6.equalsIgnoreCase("quit")) {
+                          System.out.println(q);
+                          break;
+                        }
                       }
 
                     } else if (Decision2.equalsIgnoreCase("Brooks")) {
@@ -176,6 +243,122 @@ public class InteractiveGameMain {
                           System.out.println();
                           //public static void GreekFight() {
                           //GreekFight = scan.nextLine();
+                          //
+                          // private static void GreekFight(){
+                          //   //implement counter for how many you beat
+                          //
+                          //   // hp go past 100 oh no
+                          //   //system objects
+                          //   Scanner scan = new Scanner(System.in);
+                          //   Random rand = new Random();
+                          //
+                          //
+                          //   //
+                          //   String[] enemies = {"Theta Chi", "Phi Psi", "Fiji", "Phi Delt"};
+                          //   int maxEnemyHealth = 75;
+                          //   int enemyDamage = 25;
+                          //
+                          //   //
+                          //   int health = 100;
+                          //   int attackDmg = 50;
+                          //   int numPowerade = 3;
+                          //   int healAmount = 30;
+                          //   int healthPotionDropChance = 50;
+                          //
+                          //
+                          //   System.out.println("Welcome to Greek Life!");
+                          //
+                          //   //label
+                          //   GAME:
+                          //   while (true) {
+                          //     System.out.println("--------------------------------------");
+                          //
+                          //     int enemyHealth = rand.nextInt(maxEnemyHealth);
+                          //     // picks a random number from string on line 15
+                          //
+                          //     String enemy = enemies[rand.nextInt(enemies.length)];
+                          //     System.out.println("\t# " + enemy + " has appeared! #\n");
+                          //
+                          //
+                          //
+                          //     while (enemyHealth > 0) {
+                          //       System.out.println("\tYour HP: " + health);
+                          //       System.out.println("\n\tWhat would you like to do?");
+                          //       System.out.println("\t1. Attack");
+                          //       System.out.println("\t2. Drink Powerade");
+                          //       System.out.println("\t3. Run");
+                          //
+                          //       String input = scan.nextLine();
+                          //       if (input.equals("1")){
+                          //         int damageDealt = rand.nextInt(attackDmg);
+                          //         int damageTaken = rand.nextInt(enemyDamage);
+                          //
+                          //         enemyHealth -= damageDealt;
+                          //         health -= damageTaken;
+                          //
+                          //         System.out.println("\t You punch the " + enemy + " for " + damageDealt + " damage");
+                          //         System.out.println("\t You recieved " + damageTaken + " in retaliation");
+                          //
+                          //         if (health < 1) {
+                          //               System.out.println("\t You have taken too much damage, you are too weak to go on");
+                          //
+                          //               break;
+                          //         }
+                          //       } else if (input.equals("2")) {
+                          //
+                          //                                   if (numPowerade > 0) {
+                          //               health += healAmount;
+                          //               numPowerade--;
+                          //               System.out.println("\t You drank Powerade that healed for: " + healAmount + "."
+                          //                                       + "\n\t You now have " + health + "HP."
+                          //                                       + "\n\t You now have " + numPowerade + " bottle(s) of Powerade left.\n");
+                                                    //         } else {
+                          //               System.out.println("\t You have no powerade, defeat enemies for a chance to get some.");
+                          //         }
+                          //       } else if (input.equals("3")) {
+                          //           System.out.println("\t You run away from the " + enemy);
+                          //           continue GAME;
+                          //       } else {
+                          //           System.out.println("\tinvalid Command");
+                          //       }
+                          //     }
+                          //     if (health < 1) {
+                          //           System.out.println("You limp out of the fight, weakened.");
+                          //           break;
+                          //     }
+                          //     System.out.println("--------------------------------------");
+                          //     System.out.println(" # " + enemy + " was defeated! # ");
+                                                    //     System.out.println(" # You have " + health + "HP left #");
+                          //
+                          //     if (rand.nextInt(100) < healthPotionDropChance) {
+                          //           numPowerade++;
+                          //           System.out.println(" # The " + enemy + " dropped some Powerade. # ");
+                          //           System.out.println(" # You now have " + numPowerade + " bottle(s) of powerade. # ");
+                          //     }
+                          //     System.out.println("--------------------------------------");
+                          //     System.out.println(" What would you like to do now?");
+                          //     System.out.println("1. Continue Fighting");
+                          //     System.out.println("2. Exit brooks");
+                          //     String input = scan.nextLine();
+                          //
+                          //     while (!input.equals("1") && !input.equals("2")) {
+                          //         System.out.println("invalid command");
+                          //         input = scan.nextLine();
+                          //
+                          //     }
+                          //     if (input.equals("1")) {
+                          //           System.out.println("You continue your fight.");
+                          //     } else if (input.equals("2")) {
+                          //           System.out.println("You leave Brooks.");
+                          //           break;
+                          //     }
+                          //   }
+                          //   System.out.println("--------------------------------------");
+                          //   System.out.println("Thanks For playing!");
+                          //   System.out.println("--------------------------------------");
+                          }
+                        }
+
 
 
                         } else if (Decision4.equalsIgnoreCase("leave")) {
@@ -195,10 +378,26 @@ public class InteractiveGameMain {
                           System.out.println();
                           System.out.println("Way to be a responsible and accountable teammate!");
                           System.out.println(c);
+                          break;
 
                         } else if (Decision5.equalsIgnoreCase("call")) {
                           System.out.println("You get benched from the next game and crush your team's chemistry!");
                           System.out.println(a);
+                          System.out.println();
+                          System.out.println(r);
+                          Decision6 = scan.nextLine();
+
+                          while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
+                            System.out.println(i);
+                            Decision6 = scan.nextLine();
+                          }
+                          if (Decision6.equalsIgnoreCase("try again")) {
+                            System.out.println();
+                            continue JOURNEY;
+                          } else if (Decision6.equalsIgnoreCase("quit")) {
+                            System.out.println(q);
+                            break;
+                          }
                         }
                       }
 
@@ -207,6 +406,21 @@ public class InteractiveGameMain {
                       System.out.println("They are serving chicken for the 74th day in a row!");
                       System.out.println("You eat it anyways, and get food poisoning!");
                       System.out.println(a);
+                      System.out.println();
+                      System.out.println(r);
+                      Decision6 = scan.nextLine();
+
+                      while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
+                        System.out.println(i);
+                        Decision6 = scan.nextLine();
+                      }
+                      if (Decision6.equalsIgnoreCase("try again")) {
+                        System.out.println();
+                        continue JOURNEY;
+                      } else if (Decision6.equalsIgnoreCase("quit")) {
+                        System.out.println(q);
+                        break;
+                      }
                   }
 
                 }
@@ -215,7 +429,7 @@ public class InteractiveGameMain {
                   System.out.println("You sleep through the whole day, and fail out!");
                   System.out.println(a);
                   System.out.println();
-                  System.out.println("Do you want to 'try again' or 'quit' the program?");
+                  System.out.println(r);
                   Decision6 = scan.nextLine();
 
                   while (!Decision6.equalsIgnoreCase("try again") && !Decision6.equalsIgnoreCase("quit")) {
@@ -231,118 +445,5 @@ public class InteractiveGameMain {
                   }
               }
             }
-              //
-              // private static void GreekFight(){
-              //   //implement counter for how many you beat
-              //
-              //   // hp go past 100 oh no
-              //   //system objects
-              //   Scanner scan = new Scanner(System.in);
-              //   Random rand = new Random();
-              //
-              //
-              //   //
-              //   String[] enemies = {"Theta Chi", "Phi Psi", "Fiji", "Phi Delt"};
-              //   int maxEnemyHealth = 75;
-              //   int enemyDamage = 25;
-              //
-              //   //
-              //   int health = 100;
-              //   int attackDmg = 50;
-              //   int numPowerade = 3;
-              //   int healAmount = 30;
-              //   int healthPotionDropChance = 50;
-              //
-              //
-              //   System.out.println("Welcome to Greek Life!");
-              //
-              //   //label
-              //   GAME:
-              //   while (true) {
-              //     System.out.println("--------------------------------------");
-              //
-              //     int enemyHealth = rand.nextInt(maxEnemyHealth);
-              //     // picks a random number from string on line 15
-              //
-              //     String enemy = enemies[rand.nextInt(enemies.length)];
-              //     System.out.println("\t# " + enemy + " has appeared! #\n");
-              //
-              //
-              //
-              //     while (enemyHealth > 0) {
-              //       System.out.println("\tYour HP: " + health);
-              //       System.out.println("\n\tWhat would you like to do?");
-              //       System.out.println("\t1. Attack");
-              //       System.out.println("\t2. Drink Powerade");
-              //       System.out.println("\t3. Run");
-              //
-              //       String input = scan.nextLine();
-              //       if (input.equals("1")){
-              //         int damageDealt = rand.nextInt(attackDmg);
-              //         int damageTaken = rand.nextInt(enemyDamage);
-              //
-              //         enemyHealth -= damageDealt;
-              //         health -= damageTaken;
-              //
-              //         System.out.println("\t You punch the " + enemy + " for " + damageDealt + " damage");
-              //         System.out.println("\t You recieved " + damageTaken + " in retaliation");
-              //
-              //         if (health < 1) {
-              //               System.out.println("\t You have taken too much damage, you are too weak to go on");
-              //
-              //               break;
-              //         }
-              //       } else if (input.equals("2")) {
-              //
-              //         if (numPowerade > 0) {
-              //               health += healAmount;
-              //               numPowerade--;
-              //               System.out.println("\t You Drank a health potion that healed for: " + healAmount + "."
-              //                                       + "\n\t You now have " + health + "HP."
-              //                                       + "\n\t You now have " + numPowerade + " health potions left.\n");
-              //         } else {
-              //               System.out.println("\t You have no health potions, defeat enemies for a chance to get one.");
-              //         }
-              //       } else if (input.equals("3")) {
-              //           System.out.println("\t You run away from the " + enemy);
-              //           continue GAME;
-              //       } else {
-              //           System.out.println("\tinvalid Command");
-              //       }
-              //     }
-              //     if (health < 1) {
-              //           System.out.println("You limp out of the fight, weakened.");
-              //           break;
-              //     }
-              //     System.out.println("--------------------------------------");
-              //     System.out.println(" # " + enemy + " was defeated! # ");
-              //     System.out.println(" # You have " + health + "HP left #");
-              //
-              //     if (rand.nextInt(100) < healthPotionDropChance) {
-              //           numPowerade++;
-              //           System.out.println(" # The " + enemy + " dropped a health potion. # ");
-              //           System.out.println(" # You now have " + numPowerade + " health potion(s). # ");
-              //     }
-              //     System.out.println("--------------------------------------");
-              //     System.out.println(" What would you like to do now?");
-              //     System.out.println("1. Continue Fighting");
-              //     System.out.println("2. Exit dunegeon");
-              //     String input = scan.nextLine();
-              //
-              //     while (!input.equals("1") && !input.equals("2")) {
-              //         System.out.println("invalid command");
-              //         input = scan.nextLine();
-              //
-              //     }
-              //     if (input.equals("1")) {
-              //           System.out.println("You continue your battle.");
-              //     } else if (input.equals("2")) {
-              //           System.out.println("You leave Brooks.");
-              //           break;
-              //     }
-              //   }
-              //   System.out.println("--------------------------------------");
-              //   System.out.println("Thanks For playing!");
-              //   System.out.println("--------------------------------------");
-              }
-            }
+          }
+        }
