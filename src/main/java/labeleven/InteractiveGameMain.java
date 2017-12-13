@@ -33,18 +33,19 @@ public class InteractiveGameMain {
      * Strings are used in printline statements for ease of the creators.
      * The boolean is set to true to correctly use the Label.
      */
-     // ArrayList<String> greetingMessage = new ArrayList<String>();
-     //      String z = "Welcome to Interactive Storytelling:";
-     //      String y = "A Day In the Life of a Gator!";
-     //      String x = "Dillon Thoma and Ben Watto";
-     //
-     //      greetingMessage.add(z);
-     //      greetingMessage.add(y);
-     //      greetingMessage.add(x);
-     //
-     //     for (int g = 0; g < 3; g++){
-     //       System.out.println(greetingMessage.get(g));
-     //     }
+
+    // // ArrayList<String> greetingMessage = new ArrayList<String>();
+    //       String z = "Welcome to Interactive Storytelling:";
+    //       String y = "A Day In the Life of a Gator!";
+    //       String x = "Dillon Thoma and Ben Watto";
+    //
+    //       greetingMessage.add(z);
+    //       greetingMessage.add(y);
+    //       greetingMessage.add(x);
+    //
+    //      for (int g = 0; g < 3; g++){
+    //        System.out.println(greetingMessage.get(g));
+    //      }
 
     Scanner scan = new Scanner(System.in);
     String Decision1, Decision2, Decision3, Decision4, Decision5, Decision6, Decision7;
