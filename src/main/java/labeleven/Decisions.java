@@ -14,14 +14,14 @@ public class Decisions {
    * so it has been left out of the list.
    */
 
-   String decision1;
-   String decision2;
-   String decision3;
-   String decision4;
-   String decision5;
-   String decision7;
+  String decision1;
+  String decision2;
+  String decision3;
+  String decision4;
+  String decision5;
+  String decision7;
 
-  void addDecisions(String d1, String d2, String d3, String d4, String d5, String d7){
+  void addDecisions(String d1, String d2, String d3, String d4, String d5, String d7) {
     decision1 = d1;
     decision2 = d2;
     decision3 = d3;
@@ -30,7 +30,7 @@ public class Decisions {
     decision7 = d7;
   }
 
-  void printDecisions(){
+  void printDecisions() {
     System.out.println(decision1);
     System.out.println(decision2);
     System.out.println(decision3);
