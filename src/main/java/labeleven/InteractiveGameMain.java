@@ -144,7 +144,7 @@ public class InteractiveGameMain {
            */
           if (Decision2.equalsIgnoreCase("Kins")) {
               System.out.println();
-              System.out.println("\tGood choice. \nWhat do you want to eat? 'Cantina' or 'Pasta'?");
+              System.out.println("\tGood choice. \n\tWhat do you want to eat? 'Cantina' or 'Pasta'?");
               Decision3 = scan.nextLine();
 
               // used to print invalid command if input other than those stated is used.
@@ -344,6 +344,7 @@ public class InteractiveGameMain {
                           */
 
                           break;
+                          
 
                         } else if (Decision4.equalsIgnoreCase("leave")) {
                             System.out.println();
