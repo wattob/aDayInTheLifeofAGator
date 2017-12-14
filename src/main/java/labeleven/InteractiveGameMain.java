@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * through a day in the life of an Allegheny student. Each decision leads the user
  * down a different pathway, some of which will prompt the user to try again or quit the
  * program, and some that display a congratulatory message when they make it through the day.
- * 
+ *
  * @author Dillon Thoma and Ben Watto
  */
 
@@ -35,7 +35,7 @@ public class InteractiveGameMain {
      */
 
      // trying to create an instance of a class/create an object
-     //GreekFight myFight = new GreekFight();
+     GreekFight myFight = new GreekFight();
 
 
      /** An ArrayList is declared below.
@@ -44,9 +44,9 @@ public class InteractiveGameMain {
       */
 
      ArrayList<String> list = new ArrayList<String>();
-          String item1 = "Welcome to Interactive Storytelling:";
-          String item2 = "A Day In the Life of a Gator!";
-          String item3 = "Dillon Thoma and Ben Watto";
+          String item1 = "\tWelcome to Interactive Storytelling:";
+          String item2 = "\tA Day In the Life of a Gator!";
+          String item3 = "\tDillon Thoma and Ben Watto";
 
           /** The items in the ArrayList are added and then printed using a for loop.
            * The for loop continues from 0 to 3 to produce all three items. l++ is used
@@ -63,16 +63,17 @@ public class InteractiveGameMain {
 
     Scanner scan = new Scanner(System.in);
     String Decision1, Decision2, Decision3, Decision4, Decision5, Decision6, Decision7;
-    String a = "Bad Gator!";
-    String c = "Congratulations! You made it through a day in the life of a Gator!";
-    String i = "INVALID COMMAND. Enter one of the two options listed above.";
-    String q = "GAME OVER.\nThanks for playing!";
-    String r = "Do you want to 'try again' or 'quit' the program?";
+    String a = "\tBad Gator!";
+    String c = "\tCongratulations! You made it through a day in the life of a Gator!";
+    String i = "\tINVALID COMMAND. Enter one of the two options listed above.";
+    String q = "\tGAME OVER.\n\tThanks for playing!";
+    String r = "\tDo you want to 'try again' or 'quit' the program?";
     Boolean running = true;
     Decisions decisions = new Decisions();
-    // Strings are declared for each decision and shortcuts for the program's responses
-    // The boolean running is set to true to correctly function with the label.
 
+    /** Strings are declared for each decision and shortcuts for the program's responses
+     * The boolean running is set to true to correctly function with the label.
+     */
 
 
     /** The source code will execute when the program is run.
@@ -81,11 +82,11 @@ public class InteractiveGameMain {
      * the program.
      */
 
-    System.out.println(new Date());
+    System.out.println("\t" + new Date());
     System.out.println();
 
     int age;
-    System.out.println("Please enter your age.");
+    System.out.println("\tPlease enter your age.");
     age = scan.nextInt();
     // the age is read in from the user.
 
@@ -95,24 +96,27 @@ public class InteractiveGameMain {
      *
      */
 
-    // If the are the proper age for college then the program will welcome them,
-    // but if they are too old or too young the program will ask why they are in
-    // college.
+    /** If the are the proper age for college then the program will welcome them,
+     * but if they are too old or too young the program will ask why they are in
+     * college.
+     */
     if (age >= 17 && age <= 23) {
       System.out.println();
-      System.out.println("Welcome fellow Gator! Let's begin our journey!");
+      System.out.println("\tWelcome fellow Gator! Let's begin our journey!");
     } else {
-      System.out.println("What are you doing at a college? You're not the right age! \nOh well, let's begin our journey!");
+      System.out.println("\tWhat are you doing at a college? You're not the right age! \n\tOh well, let's begin our journey!");
 
     }
     Decision1 = scan.nextLine();
 
-    // label used in the 'try again' feature. If try again is typed it will start from here.
-    // but if 'quit' is typed a break is used to end the program and produce the final output.
+    /** label used in the 'try again' feature. If try again is typed it will start from here.
+     * but if 'quit' is typed a break is used to end the program and produce the final output.
+     */
+
     JOURNEY:
     while (running) {
       System.out.println();
-      System.out.println("You wake up to the buzzing of your alarm. \nDo you go back to 'sleep' or 'get up' out of bed?");
+      System.out.println("\tYou wake up to the buzzing of your alarm. \n\tDo you go back to 'sleep' or 'get up' out of bed?");
       Decision1 = scan.nextLine();
 
       // used to print invalid command if input other than those stated is used.
@@ -121,11 +125,12 @@ public class InteractiveGameMain {
         Decision1 = scan.nextLine();
       }
 
-    // When 'get up' is chosen, output is printed in the terminal.
-    // Following that another questions is asked using a similar method.
+    /** When 'get up' is chosen, output is printed in the terminal.
+     * Following that another questions is asked using a similar method.
+     */
     if (Decision1.equalsIgnoreCase("get up")) {
           System.out.println();
-          System.out.println("You go to your first class of the day, and need to decide where to eat for lunch. \nDo you want to eat at 'Brooks' or 'Kins'?");
+          System.out.println("\tYou go to your first class of the day, and need to decide where to eat for lunch. \n\tDo you want to eat at 'Brooks' or 'Kins'?");
           Decision2 = scan.nextLine();
 
           // used to print invalid command if input other than those stated is used.
@@ -134,11 +139,12 @@ public class InteractiveGameMain {
             Decision2 = scan.nextLine();
           }
 
-          // When 'kins' is chosen, output is printed in the terminal.
-          //  Another question follows the input recieved.
+          /** When 'kins' is chosen, output is printed in the terminal.
+           *  Another question follows the input recieved.
+           */
           if (Decision2.equalsIgnoreCase("Kins")) {
               System.out.println();
-              System.out.println("Good choice. \nWhat do you want to eat? 'Cantina' or 'Pasta'?");
+              System.out.println("\tGood choice. \nWhat do you want to eat? 'Cantina' or 'Pasta'?");
               Decision3 = scan.nextLine();
 
               // used to print invalid command if input other than those stated is used.
@@ -147,11 +153,12 @@ public class InteractiveGameMain {
                 Decision3 = scan.nextLine();
               }
 
-              // if 'kins' is chosen, the user than chooses between Cantina or pasta.
-              // Another decision follows depending on the choice made.
+              /** if 'kins' is chosen, the user than chooses between Cantina or pasta.
+               * Another decision follows depending on the choice made.
+               */
               if (Decision3.equalsIgnoreCase("Cantina")) {
                   System.out.println();
-                  System.out.println("You enjoy your lunch and head to your afternoon classes. \nAfter class, do you want to do 'homework' or take a 'nap'?");
+                  System.out.println("\tYou enjoy your lunch and head to your afternoon classes. \n\tAfter class, do you want to do 'homework' or take a 'nap'?");
                   Decision4 = scan.nextLine();
 
                   // used to print invalid command if input other than those stated is used.
@@ -160,15 +167,16 @@ public class InteractiveGameMain {
                     Decision4 = scan.nextLine();
                   }
 
-                  // When 'cantina' is typed, another prompt will appear.
-                  // if and else if conditonal logic is used to determine what is produced
-                  // from the users input.
-                  // If the user selcects 'nap' then the program will end and the user
-                  // will be asked if they want to 'try again', but if they choose homework
-                  // more prompts will appear to continue along their day.
+                  /** When 'cantina' is typed, another prompt will appear.
+                   * if and else if conditonal logic is used to determine what is produced
+                   * from the users input.
+                   * If the user selcects 'nap' then the program will end and the user
+                   * will be asked if they want to 'try again', but if they choose homework
+                   * more prompts will appear to continue along their day.
+                   */
                   if (Decision4.equalsIgnoreCase("homework")) {
                       System.out.println();
-                      System.out.println("Way to be a responsible Gator! \nIt's almost dinner time! Do you want 'Chipotle' or 'Taco Bell'?");
+                      System.out.println("\tWay to be a responsible Gator! \n\tIt's almost dinner time! Do you want 'Chipotle' or 'Taco Bell'?");
                       Decision5 = scan.nextLine();
 
                       // used to print invalid command if input other than those stated is used.
@@ -177,15 +185,16 @@ public class InteractiveGameMain {
                         Decision5 = scan.nextLine();
                       }
 
-                      //Following the answer of 'homework' the user is asked where they want dinner.
-                      // If the user choices Chipotle, their car will break down because the nearest one is in Erie.
-                      // But if the user inputs Taco Bell they will recieve the final question.
+                      /**Following the answer of 'homework' the user is asked where they want dinner.
+                       * If the user choices Chipotle, their car will break down because the nearest one is in Erie.
+                       * But if the user inputs Taco Bell they will recieve the final question.
+                       */
                       if (Decision5.equalsIgnoreCase("Taco Bell")) {
                           System.out.println();
-                          System.out.println("$12 for 12 tacos? Best investment of your life! \nWay to be a financially responsible Gator!");
+                          System.out.println("\t$12 for 12 tacos? Best investment of your life! \n\tWay to be a financially responsible Gator!");
                           System.out.println();
-                          System.out.println("On the way back, your buddy asks you to go to a party, \nbut you could be studying for an exam coming up.");
-                          System.out.println("Do you go to the 'party' or study at the 'library'?");
+                          System.out.println("\tOn the way back, your buddy asks you to go to a party, \n\tbut you could be studying for an exam coming up.");
+                          System.out.println("\tDo you go to the 'party' or study at the 'library'?");
                           Decision7 = scan.nextLine();
 
                           // used to print invalid command if input other than those stated is used.
@@ -194,11 +203,12 @@ public class InteractiveGameMain {
                             Decision7 = scan.nextLine();
                           }
 
-                          // If 'Party' is selected than the program will ask the user
-                          // if they want to 'try again' or 'quit' the program.
+                          /** If 'Party' is selected than the program will ask the user
+                           * if they want to 'try again' or 'quit' the program
+                           */
                           if (Decision7.equalsIgnoreCase("party")) {
                             System.out.println();
-                            System.out.println("You drink too much and get sick. Next stop, dropping out!");
+                            System.out.println("\tYou drink too much and get sick. Next stop, dropping out!");
                             System.out.println(a);
                             System.out.println();
                             System.out.println(r);
@@ -219,11 +229,12 @@ public class InteractiveGameMain {
 
                           } else if (Decision7.equalsIgnoreCase("library")) {
                             System.out.println();
-                            System.out.println("You get a great study session in and head to bed \nat a reasonable hour!");
+                            System.out.println("\tYou get a great study session in and head to bed \n\tat a reasonable hour!");
                             System.out.println(c);
-                            // Object oriented list used to print out the decisions, after
-                            // the program is completed running is set to false
-                            // to exit the program.
+                            /** Object oriented list used to print out the decisions, after
+                             * the program is completed running is set to false
+                             * to exit the program.
+                             */
                             running = false;
                             decisions.addDecisions(Decision1, Decision2, Decision3, Decision4, Decision5, Decision7);
                             decisions.printDecisions();
@@ -231,7 +242,7 @@ public class InteractiveGameMain {
 
                       } else if (Decision5.equalsIgnoreCase("Chipotle")) {
                             System.out.println();
-                            System.out.println("The nearest Chipotle is in Erie, and you get a flat tire on the way!");
+                            System.out.println("\tThe nearest Chipotle is in Erie, and you get a flat tire on the way!");
                             System.out.println(a);
                             System.out.println();
                             System.out.println(r);
@@ -242,9 +253,10 @@ public class InteractiveGameMain {
                               System.out.println(i);
                               Decision6 = scan.nextLine();
                             }
-                            // If 'try again' is selected than the program will
-                            // continue from the Label,
-                            // but if 'quit' is selected the program will end.
+                            /** If 'try again' is selected than the program will
+                             * continue from the Label,
+                             * but if 'quit' is selected the program will end.
+                             */
                             if (Decision6.equalsIgnoreCase("try again")) {
                               System.out.println();
                               continue JOURNEY;
@@ -256,7 +268,7 @@ public class InteractiveGameMain {
 
                   } else if (Decision4.equalsIgnoreCase("nap")) {
                       System.out.println();
-                      System.out.println("You procrastinated too much, and failed out of your classes!");
+                      System.out.println("\tYou procrastinated too much, and failed out of your classes!");
                       System.out.println(a);
                       System.out.println();
                       System.out.println(r);
@@ -278,7 +290,7 @@ public class InteractiveGameMain {
 
               } else if (Decision3.equalsIgnoreCase("Pasta")) {
                     System.out.println();
-                    System.out.println("You spend all your munch money and starve!");
+                    System.out.println("\tYou spend all your munch money and starve!");
                     System.out.println(a);
                     System.out.println();
                     System.out.println(r);
@@ -299,7 +311,7 @@ public class InteractiveGameMain {
               }
 
                     } else if (Decision2.equalsIgnoreCase("Brooks")) {
-                        System.out.println("Risky move, Gator. Do you want to go straight to 'Slice' or try the 'Main' Line?");
+                        System.out.println("\tRisky move, Gator. Do you want to go straight to 'Slice' or try the 'Main' Line?");
                         System.out.println();
                         Decision3 = scan.nextLine();
 
@@ -311,9 +323,9 @@ public class InteractiveGameMain {
 
                         if (Decision3.equalsIgnoreCase("Slice")) {
                           System.out.println();
-                          System.out.println("There is no cheese pizza today; only leftovers from last week on a pizza!");
-                          System.out.println("A member of greek life took the last cheese slice!");
-                          System.out.println("Do you want to 'fight' for it, or 'leave' Brooks?");
+                          System.out.println("\tThere is no cheese pizza today; only leftovers from last week on a pizza!");
+                          System.out.println("\tA member of greek life took the last cheese slice!");
+                          System.out.println("\tDo you want to 'fight' for it, or 'leave' Brooks?");
                           Decision4 = scan.nextLine();
 
                         // used to print invalid command if input other than those stated is used.
@@ -324,19 +336,21 @@ public class InteractiveGameMain {
 
                         if (Decision4.equalsIgnoreCase("fight")) {
                           System.out.println();
+                          myFight.initiate_fight();
 
-                          /** the source code.
-                          *
-                          *
+                          /** The constructor is called.
+                          * Initiating the GreekFight, after it is complete the program
+                          * uses a break and produces the final output.
                           */
 
+                          break;
 
                         } else if (Decision4.equalsIgnoreCase("leave")) {
                             System.out.println();
-                            System.out.println("You decide to go back to your dorm and make mac and cheese.");
-                            System.out.println("Now you have practice for your sports team, but a bunch \nof friends are going out to a movie.");
+                            System.out.println("\tYou decide to go back to your dorm and make mac and cheese.");
+                            System.out.println("\tNow you have practice for your sports team, but a bunch \n\tof friends are going out to a movie.");
                             System.out.println();
-                            System.out.println("Do you go to 'practice' or 'call' your coach saying you are sick?");
+                            System.out.println("\tDo you go to 'practice' or 'call' your coach saying you are sick?");
                             Decision5 = scan.nextLine();
 
                             // used to print invalid command if input other than those stated is used.
@@ -347,12 +361,12 @@ public class InteractiveGameMain {
 
                         if (Decision5.equalsIgnoreCase("practice")) {
                           System.out.println();
-                          System.out.println("Way to be a responsible and accountable teammate!");
+                          System.out.println("\tWay to be a responsible and accountable teammate!");
                           System.out.println(c);
                           running = false;
 
                         } else if (Decision5.equalsIgnoreCase("call")) {
-                            System.out.println("You get benched from the next game and crush your team's chemistry!");
+                            System.out.println("\tYou get benched from the next game and crush your team's chemistry!");
                             System.out.println(a);
                             System.out.println();
                             System.out.println(r);
@@ -375,8 +389,8 @@ public class InteractiveGameMain {
 
                         } else if (Decision3.equalsIgnoreCase("Main")) {
                             System.out.println();
-                            System.out.println("They are serving chicken for the 74th day in a row!");
-                            System.out.println("You eat it anyways, and get food poisoning!");
+                            System.out.println("\tThey are serving chicken for the 74th day in a row!");
+                            System.out.println("\tYou eat it anyways, and get food poisoning!");
                             System.out.println(a);
                             System.out.println();
                             System.out.println(r);
@@ -398,12 +412,13 @@ public class InteractiveGameMain {
 
                     }
 
-    // If 'sleep' is selected then the program will produce the following output.
-    // Then the user will be asked if they want to 'try again' if yes the program
-    // will start at the continue at the Label, if no, the break will be iniatilized.
+    /** If 'sleep' is selected then the program will produce the following output.
+     * Then the user will be asked if they want to 'try again' if yes the program
+     * will start at the continue at the Label, if no, the break will be iniatilized.
+     */
     } else if (Decision1.equalsIgnoreCase("sleep")) {
         System.out.println();
-        System.out.println("You sleep through the whole day, and fail out!");
+        System.out.println("\tYou sleep through the whole day, and fail out!");
         System.out.println(a);
         System.out.println();
         System.out.println(r);

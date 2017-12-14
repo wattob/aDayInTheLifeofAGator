@@ -2,9 +2,18 @@
 
 ## Group Reflection
 
-This lab required me to explore the real-world applications of computer science.
-Please review the Laboratory Assignment Sheet and add the required details to
-this paragraph.
+This lab required us to explore the real-world applications of computer science.
+This project was much more demanding than we originally expected, but we both learned
+a lot about real-world applications. We used trial and error for a lot of the project.
+We used the gradle build and the gradle run command constantly to be kept up to date
+on how our program was functioning. Another real-world application we learned, was that
+if it did not work one way, it could work another. If we could not figure it out
+after that, we would assume we had made a mistake in our programming. Just from reading the
+lab eleven outline, you can see the many real-world applications of computer science.
+You could create a text based game like us. Even other groups with similar topics
+probably approached the problem in a different manner than us. Other topics 
+could have been cryptology, computer graphics, or software testing. Computer science
+has many options if it chosen as your career. You can apply it however you can imagine.
 
 ## Dillon's Reflection
 
