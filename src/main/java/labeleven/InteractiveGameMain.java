@@ -22,7 +22,6 @@ public class InteractiveGameMain {
    * the user to answer, each answer prompting a different question based on the previous.
    * The print line statements make the program display the output.
    *
-   * @author Dillon Thoma and Ben Watto
    */
 
   public static void main(String[] args) {
@@ -344,7 +343,7 @@ public class InteractiveGameMain {
                           */
 
                           break;
-                          
+
 
                         } else if (Decision4.equalsIgnoreCase("leave")) {
                             System.out.println();
