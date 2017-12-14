@@ -35,3 +35,12 @@ mainClassName = 'labeleven.InteractiveGameMain'
 run {
    standardInput = System.in
 }
+// perform checkstyle checking with the "gradle check" command
+apply plugin: 'checkstyle'
+checkstyle.toolVersion = '8.1'
+checkstyle {
+  ignoreFailures = false
+  maxWarnings = 0
+  maxErrors = 0
+  configFile = new File(rootDir, "config/checkstyle/google_checks.xml")
+}

@@ -1,7 +1,5 @@
 package labeleven;
 
-import java.util.*;
-
 /** The public class has a method that stores the input from the user.
  * An object oriented list is produced when the correct path has been completed.
  * The results are then printed in the terminal.
