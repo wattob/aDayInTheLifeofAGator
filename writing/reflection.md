@@ -4,24 +4,25 @@
 
 This lab required us to explore the real-world applications of computer science.
 This project was much more demanding than we originally expected, but we both learned
-a lot about real-world applications. We used trial and error for a lot of the project.
-We used the gradle build and the gradle run command constantly to be kept up to date
-on how our program was functioning. Another real-world application we learned was
-if it did not work one way, it could work another. If we could not figure it out
-after that, we would assume we had made a mistake in our programming. Just from
-reading the lab eleven outline, you can see the many real-world applications of
-computer science. You could create a text based game like us, and even other groups
-with similar topics probably approached the problem in a different manner than us.
-Other topics could have been cryptology, computer graphics, or software testing.
-Computer science has many options if it chosen as your career. You can apply it
-however you can imagine. As for this specific project, we applied the real-world
-decisions of being a student at Allegheny College, and how some people go through
-their everyday life. We applied it to computer science by taking all the things
-that we learned throughout the semester and put it all together into one big program.
-It was amazing how much we learned in this project compared to others, as I feel
-we learned more applying everything to this project than all the other labs combined!
-The implementation of all the code we created was extremely beneficial to our learning
-of Computer Science, and unbelievably beneficial.
+a lot about real-world applications. We used different attempts for a lot of the
+project. We used the gradle build and the gradle run command constantly to be
+kept up to date on how our program was functioning. Another real-world application
+we learned was if it did not work one way, it could work another. If we could
+not figure it out after that, we would assume we had made a mistake in our
+programming. Just from reading the lab eleven outline, you can see the many
+real-world applications of computer science. You could create a text based game
+like us, and even other groups with similar topics probably approached the problem
+in a different manner than us. Other topics could have been cryptology, computer
+graphics, or software testing. Computer science has many options if it chosen as
+your career. You can apply it however you can imagine. As for this specific
+project, we applied the real-world decisions of being a student at Allegheny
+College, and how some people go through their everyday life. We applied it to
+computer science by taking all the things that we learned throughout the semester
+and put it all together into one big program. It was amazing how much we learned
+in this project compared to others, as I feel we learned more applying everything
+to this project than all the other labs combined! The implementation of all the
+code we created was extremely beneficial to our learning of Computer Science,
+and unbelievably beneficial.
 
 ## Dillon's Reflection
 
