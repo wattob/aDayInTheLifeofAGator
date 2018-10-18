@@ -47,7 +47,7 @@ public class InteractiveGameMain {
     ArrayList<String> list = new ArrayList<String>();
     String item1 = "\tWelcome to Interactive Storytelling:";
     String item2 = "\tA Day In the Life of a Gator!";
-    String item3 = "\tDillon Thoma and Ben Watto";
+    String item3 = "\tCreated By: Dillon Thoma and Ben Watto";
 
     /** The items in the ArrayList are added and then printed using a for loop.
      * The for loop continues from 0 to 3 to produce all three items. l++ is used
@@ -98,11 +98,17 @@ public class InteractiveGameMain {
     System.out.println("\t" + new Date());
     System.out.println();
 
+    // Reads in user's age
     int age;
-    System.out.println("\tPlease enter your age.");
+    System.out.println("\tPlease enter your age: ");
     Scanner scan = new Scanner(System.in);
     age = scan.nextInt();
-    // the age is read in from the user.
+
+    // Reads in user's name
+    String name;
+    System.out.println("\tPlease enter your name: ");
+    Scanner scan2 = new Scanner(System.in);
+    name = scan2.nextLine();
 
     /** If the are the proper age for college then the program will welcome them,
      * but if they are too old or too young the program will ask why they are in
@@ -110,10 +116,12 @@ public class InteractiveGameMain {
      */
     if (age >= 17 && age <= 23) {
       System.out.println();
+      System.out.println("\tNice to meet you, " + name + "!");
       System.out.println("\tWelcome fellow Gator! Let's begin our journey!");
     } else {
-      System.out.println("\tWhat are you doing at a college? You're not the right age!"
-                          + "\n\tOh well, let's begin our journey!");
+      System.out.println("\tHey, " + name + " what are you doing at a college? "
+          + "You're not the right age!"
+          + "\n\tOh well, let's begin our journey!");
 
     }
     String decisionOne;
