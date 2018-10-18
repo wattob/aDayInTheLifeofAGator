@@ -1,54 +1,13 @@
-<!---
+# aDayInTheLifeofAGator
+A Java program that takes the user through decisions throughout Allegheny. Eventually, the program will lead you to a Greek Fight, which is a turn based battle also using the users decisions.
 
-TASK LIST:
+## About This Project
+This Java project was created by 2 Allegheny College students for a final project for the Fall 2017 semester (in CMPSC111). As such there are some files relating to the assignment, such as the files located in the writing file and some files say "lab" in them. Since this project was submitted in December, it will most likely not be updated. All of the files commits were copied over from the original GitHub classroom repository.
 
-  * Use cp -rf *.* to copy all of the files and directories in this repository
-    to the starter repository for this assignment
-  * Change into the directory for the starer repository
-  * Update the header (e.g., #) to only give the name of the assignment
-  * Update the first paragraph to include the commented-out content
-  * Change the link in the # Problems section to point to this lab's starter
-  * Create the assignment in the GitHub Classroom, noting the URL
-  * Test the assignment by accepting it with your own GitHub account
-  * Check to ensure that your GitHub repository is created correctly
-  * Share the assignment link with all of the students using email or Slack
-
-PROBLEMS?
-
-  * Contact Gregory M. Kapfhammer by email or Slack
-  * Raise an issue in the GitHub repository for this assignment
-
-FOR THIS ASSIGNMENT: Ultimately, it would be useful to setup a naming convention
-for the graphics files and then check to ensure that a certain number of
-available in the GitHub repository. I did not have time to implement this feature.
-
--->
-
-# cs111-F2017-lab11-starter
-
-Designed for use with [GitHub Classroom](https://classroom.github.com/), this
-repository contains the starter for Laboratory 11 in Computer Science 111.
-
-## Introduction
-
-Please review the carefully formatted assignment sheet for this project as it
-provides more details about the steps that a computer scientist should take to
-complete this assignment. You can view this assignment sheet by visiting the
-listing of laboratories on the course web site.
-
-## Learning
-
-If you have not done so already, please read all of the relevant [GitHub
-Guides](https://guides.github.com/) that explain how to use many of the features
-that GitHub provides. In particular, please make sure that you have read the
-following GitHub guides: [Mastering
-Markdown](https://guides.github.com/features/mastering-markdown/), [Hello
-World](https://guides.github.com/activities/hello-world/), and [Documenting Your
-Projects on GitHub](https://guides.github.com/features/wikis/). Each of these
-guides will help you to understand how to use both [GitHub](http://github.com) and
-[GitHub Classroom](https://classroom.github.com/).
-
-## Commands
+## Running The Project
+This project uses gradle. Here are some important commands that can be used in terminal to use the project:
+* `gradle build`: create the bytecode from the Java source code
+* `gradle run`: run the Java program in the command-line
 
 You can also complete several important Java programming tasks by using the
 `gradle` tool. For instance, you can compile (i.e., create bytecode from the
@@ -57,13 +16,17 @@ program's source code if it is a correct program) the program using the command
 
 * `gradle clean`: clean the project of all the derived files
 * `gradle check`: check the quality of the code using Checkstyle
-* `gradle build`: create the bytecode from the Java source code
-* `gradle run`: run the Java program in the command-line
 * `gradle tasks`: display details about the Gradle system
 
-Please note that this assignment requires you to configure Gradle on your own.
-You should refer to previous laboratory and practical assignments for examples
-about how to complete this task.
+## Problems, Issues, or Ideas?
+If you have problems, issues, or ideas for features on this project, please add an issue to the issue tracker. As this is project is likely done being updated, there is no guarantee that the issue will be addressed
+
+## Contributors
+The following people contributed to this project:
+- Ben Watto
+- Dillon Thoma
+
+Gregory Kapfhammer also helped by creating this repository.
 
 ## Travis
 
@@ -103,11 +66,3 @@ repository and mention this assignment.
 Students who find, and use the appropriate GitHub issue tracker to correctly
 document, a mistake in any aspect of this laboratory assignment will receive
 free laptop stickers and extra credit towards their grade for it.
-
-## Assistance
-
-If you are having trouble completing any part of this project, then please talk
-with either the course instructor or a teaching assistant during the laboratory
-session. Alternatively, you may ask questions in the Slack team for this
-course. Finally, you can schedule a meeting during the course instructor's
-office hours.
