@@ -1,25 +1,22 @@
 # aDayInTheLifeofAGator
-A Java program that takes the user through decisions throughout Allegheny. Eventually, the program will lead you to a Greek Fight, which is a turn based battle also using the users decisions.
+For this Java program, we created a text based adventure game that took the user
+through a series of decisions that they needed to make in order to make it through
+a day as an Allegheny student. For the design, we focused on using conditional logic for the different different decision throughout the day.
 
 ## About This Project
-This Java project was created by 2 Allegheny College students for a final project for the Fall 2017 semester (in CMPSC111). As such there are some files relating to the assignment, such as the files located in the writing file and some files say "lab" in them. Since this project was submitted in December, it will most likely not be updated. All of the files commits were copied over from the original GitHub classroom repository.
+This Java project was created as a Final Project at Allegheny College for CMPSC111. Many of the files used by this include a description from the lab. This program will most likely not be updated again and the commits have been copied over from the original repository.
 
 ## Running The Project
-This project uses gradle. Here are some important commands that can be used in terminal to use the project:
-* `gradle build`: create the bytecode from the Java source code
-* `gradle run`: run the Java program in the command-line
-
 You can also complete several important Java programming tasks by using the
 `gradle` tool. For instance, you can compile (i.e., create bytecode from the
 program's source code if it is a correct program) the program using the command
 `gradle build`. There are also additional commands that you can type:
 
+* `gradle build`: create the bytecode from the Java source code
+* `gradle run`: run the Java program in the command-line
 * `gradle clean`: clean the project of all the derived files
 * `gradle check`: check the quality of the code using Checkstyle
 * `gradle tasks`: display details about the Gradle system
-
-## Problems, Issues, or Ideas?
-If you have problems, issues, or ideas for features on this project, please add an issue to the issue tracker. As this is project is likely done being updated, there is no guarantee that the issue will be addressed
 
 ## Contributors
 The following people contributed to this project:
@@ -48,6 +45,8 @@ developed for the following software and versions:
 * proselint 0.7.0
 
 ## Problems
+
+If you have problems, issues, or ideas for features on this project, please add an issue to the issue tracker. As this is project is likely done being updated, there is no guarantee that the issue will be addressed
 
 If you have found a problem with this assignment's provided source code, then
 you can go to the [Computer Science 111 Lab 11
